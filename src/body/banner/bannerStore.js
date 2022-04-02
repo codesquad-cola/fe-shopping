@@ -33,8 +33,8 @@ export const bannerStore = {
 
   notifyUpdatedTabNum(tabNum) {
     this.observers.forEach((observer) => {
-      if (!observer.update) return;
-      observer.update(tabNum);
+      if (!observer.updateView) return;
+      observer.updateView(tabNum);
     });
   },
 

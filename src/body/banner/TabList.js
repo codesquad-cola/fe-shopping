@@ -15,7 +15,7 @@ export class TabList {
     this.$bannerTabList.addEventListener('mouseover', this.handleMouseOver);
   }
 
-  update(tabNum) {
+  updateView(tabNum) {
     const $prevTab = selector(`.${SELECTED}`, this.$bannerTabList);
     const $curTab = this.$bannerTabList.children[tabNum];
 

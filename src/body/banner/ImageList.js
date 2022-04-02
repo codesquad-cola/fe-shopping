@@ -8,7 +8,7 @@ export class ImageList {
     this.$bannerImageList = selector(`.${BANNER_IMAGELIST}`);
   }
 
-  update(tabNum) {
+  updateView(tabNum) {
     const $prevImage = selector(`.${SELECTED}`, this.$bannerImageList);
     const $curImage = this.$bannerImageList.children[tabNum];
 

@@ -22,7 +22,7 @@ export class LinkList {
     });
   }
 
-  update(tabNum) {
+  updateView(tabNum) {
     const $prevLink = selector(`.${SELECTED}`, this.$bannerLinkList);
     const $curLink = this.$bannerLinkList.children[tabNum];
 
