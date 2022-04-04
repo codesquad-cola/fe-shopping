@@ -81,14 +81,13 @@ export class GlobalCategory {
 
   openCategoryItem = (e) => {
     const $depth1Layer = e.target.closest(`.${CATEGORY_LAYER_DEPTH_1}`);
-    if ($depth1Layer) return;
+
+    if ($depth1Layer || gCategoryStore.didMouseMoveRight()) return;
 
     const $categoryItem = e.target.closest(`.${CATEGORY_ITEM}`);
-    if (!gCategoryStore.didMouseMoveRight()) {
-      if (this.$selectedCategoryItem) removeClass(LAYER_OPEN, this.$selectedCategoryItem);
-      this.$selectedCategoryItem = $categoryItem;
-      addClass(LAYER_OPEN, $categoryItem);
-    }
+    if (this.$selectedCategoryItem) removeClass(LAYER_OPEN, this.$selectedCategoryItem);
+    this.$selectedCategoryItem = $categoryItem;
+    addClass(LAYER_OPEN, $categoryItem);
   };
 
   /* ********** */
