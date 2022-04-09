@@ -39,7 +39,8 @@ export const bannerStore = {
   },
 
   setCarouselInterval(ms) {
-    if (this.state.carouselIntervalId) clearInterval(this.state.carouselIntervalId);
+    if (this.state.carouselIntervalId)
+      clearInterval(this.state.carouselIntervalId);
     this.state.carouselIntervalId = setInterval(() => {
       const nextTabNum = (this.getTabNum() + 1) % this.getTabLength();
       this.setTabNum(nextTabNum);
